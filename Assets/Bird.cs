@@ -24,7 +24,7 @@ public class Bird : MonoBehaviour
         {
             rigidbody.linearVelocityY += speed ;
         }
-        if (Keyboard.current.dKey.wasPressedThisFrame || Keyboard.current.rightArrowKey.wasPressedThisFrame)
+        if (Keyboard.current.dKey.wasPressedThisFrame || Keyboard.current.rightArrowKey.wasPressedThisFrame || Keyboard.current.enterKey.wasPressedThisFrame)
         {
             rigidbody.linearVelocityX += xSpeed;
         }
