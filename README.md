@@ -21,5 +21,8 @@ Around the 150sec mark, the game finally switches into super fast flappy bird!
 
 Good Luck!
 
+## AI Use:
+Only for programming functions that are too complicated for me to math: like a physics dampening funtion. etc..
+Everything else: me!
 
 
