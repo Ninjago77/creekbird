@@ -17,28 +17,39 @@ public class Spawn : MonoBehaviour
         SpawnPipe();
     }
 
-    // Update is called once per frame
+    // 1. Keep difficulty scaling in Update so movement stays perfectly smooth
     void Update()
     {
         if (currentSpawnRate > minSpawnRate)
         {
             currentSpawnRate -= difficultySpeed * Time.deltaTime;
-
-            // Clamp it so it never goes below your minimum allowed rate
             currentSpawnRate = Mathf.Max(currentSpawnRate, minSpawnRate);
         }
-        if (currentSpawnRate <= minSpawnRate)
-        {
-            logic.leftSpeed += difficultySpeed * Time.deltaTime;
-        }
+        //else
+        //{
+        //    if (logic != null)
+        //    {
+        //        // Smooth movement depends on Time.deltaTime
+        //        logic.leftSpeed += difficultySpeed * Time.deltaTime;
+        //    }
+        //}
+
+        //if (logic.time > 60)
+        //{
+        //    logic.leftSpeed += difficultySpeed * Time.deltaTime;
+        //}
+    }
+
+    // 2. Move ONLY the spawning timer to FixedUpdate for absolute browser precision
+    void FixedUpdate()
+    {
+        // In FixedUpdate, use Time.fixedDeltaTime
+        timer += Time.fixedDeltaTime;
+
         if (timer >= currentSpawnRate)
         {
             SpawnPipe();
-            timer = 0f;
-        } 
-        else
-        {
-            timer += Time.deltaTime;
+            timer = 0f; // This is now safe because fixedDeltaTime never spikes!
         }
     }
 

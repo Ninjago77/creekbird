@@ -10,7 +10,14 @@ public class Pipe : MonoBehaviour
     void Start()
     {
         logic = FindAnyObjectByType < ManageLogic > ();
-        speed = logic.leftSpeed;
+        if (logic.time >= 60) {
+            speed = logic.leftSpeed*((float)logic.time/60f);
+        }
+        else
+        {
+            speed = logic.leftSpeed;
+
+        }
         //transform.position = new Vector3(0.486f,Random.Range(-0.658f, -0.965f),transform.position.z);
     }
 

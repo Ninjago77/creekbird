@@ -995,7 +995,7 @@ MonoBehaviour:
   fallSprite: {fileID: 1660470622, guid: 01a1ce89605ae2e4e81100c679d12bd0, type: 3}
   rigidbody: {fileID: 1384456463}
   speed: 0.6
-  xSpeed: 0.6
+  xSpeed: 0.45
   xDamping: 0.15
 --- !u!212 &1384456461
 SpriteRenderer:

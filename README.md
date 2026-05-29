@@ -20,11 +20,11 @@ Enter / Space (GameOver): reset
 
 \### Gamemode Switching
 
-The Game switches from slidy bird to cagey bird around the 35sec mark.
+The Game switches from slidy bird to cagey bird around the 45sec mark.
 
-Around the 55sec mark, the game finally switches into super fast flappy bird!
+Around the 150sec mark, the game finally switches into super fast flappy bird!
 
-Good Luck
+Good Luck!
 
 
 

@@ -37,7 +37,7 @@ public class Bird : MonoBehaviour
             spriteRenderer.sprite = fallSprite;
         }
         // Unity's exact 2D damping formula: velocity *= 1 / (1 + dt * damping)
-        float dampingFactor = 1.0f / (1.0f + Time.fixedDeltaTime * xDamping);
+        float dampingFactor = 1.0f / (1.0f + Time.deltaTime * xDamping);
 
         float newX = rigidbody.linearVelocity.x * dampingFactor;
 
